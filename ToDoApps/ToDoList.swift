@@ -40,6 +40,14 @@ class ToDoList {
         return item
     }
     
+    func move(item: ChecklistItem, to index: Int) {
+        guard let currentIndex = toDos.index(of: item) else {
+            return
+        }
+        toDos.remove(at: currentIndex)
+        toDos.insert(item, at: index)
+    }
+    
     private func randomDescription() -> String {
         let title = ["New todo item",
                      "Generic todo",
