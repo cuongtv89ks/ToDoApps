@@ -14,7 +14,7 @@
 		01526022215F98B1006A5930 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01526020215F98B1006A5930 /* LaunchScreen.storyboard */; };
 		01A183712160ED3A00486C6F /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A183702160ED3A00486C6F /* ChecklistItem.swift */; };
 		01A1837321645EA700486C6F /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1837221645EA700486C6F /* ToDoList.swift */; };
-		01A183792164E55100486C6F /* AddItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A183782164E55100486C6F /* AddItemTableViewController.swift */; };
+		01A183792164E55100486C6F /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A183782164E55100486C6F /* ItemDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		01526029215FBC33006A5930 /* ProtocolMyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ProtocolMyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		01A183702160ED3A00486C6F /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		01A1837221645EA700486C6F /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
-		01A183782164E55100486C6F /* AddItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemTableViewController.swift; sourceTree = "<group>"; };
+		01A183782164E55100486C6F /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 				01526023215F98B1006A5930 /* Info.plist */,
 				01526029215FBC33006A5930 /* ProtocolMyPlayground.playground */,
 				01A183702160ED3A00486C6F /* ChecklistItem.swift */,
-				01A183782164E55100486C6F /* AddItemTableViewController.swift */,
+				01A183782164E55100486C6F /* ItemDetailViewController.swift */,
 			);
 			path = ToDoApps;
 			sourceTree = "<group>";
@@ -147,7 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0152601A215F98B1006A5930 /* ChecklistViewController.swift in Sources */,
-				01A183792164E55100486C6F /* AddItemTableViewController.swift in Sources */,
+				01A183792164E55100486C6F /* ItemDetailViewController.swift in Sources */,
 				01A183712160ED3A00486C6F /* ChecklistItem.swift in Sources */,
 				01526018215F98B1006A5930 /* AppDelegate.swift in Sources */,
 				01A1837321645EA700486C6F /* ToDoList.swift in Sources */,
