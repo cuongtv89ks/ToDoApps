@@ -15,6 +15,7 @@
 		01A183712160ED3A00486C6F /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A183702160ED3A00486C6F /* ChecklistItem.swift */; };
 		01A1837321645EA700486C6F /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1837221645EA700486C6F /* ToDoList.swift */; };
 		01A183792164E55100486C6F /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A183782164E55100486C6F /* ItemDetailViewController.swift */; };
+		01E6165C2170DD8000ED8E10 /* ChecklistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6165B2170DD8000ED8E10 /* ChecklistTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		01A183702160ED3A00486C6F /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		01A1837221645EA700486C6F /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
 		01A183782164E55100486C6F /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		01E6165B2170DD8000ED8E10 /* ChecklistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				01526019215F98B1006A5930 /* ChecklistViewController.swift */,
 				01A1837221645EA700486C6F /* ToDoList.swift */,
 				0152601B215F98B1006A5930 /* Main.storyboard */,
+				01E6165B2170DD8000ED8E10 /* ChecklistTableViewCell.swift */,
 				0152601E215F98B1006A5930 /* Assets.xcassets */,
 				01526020215F98B1006A5930 /* LaunchScreen.storyboard */,
 				01526023215F98B1006A5930 /* Info.plist */,
@@ -150,6 +153,7 @@
 				01A183792164E55100486C6F /* ItemDetailViewController.swift in Sources */,
 				01A183712160ED3A00486C6F /* ChecklistItem.swift in Sources */,
 				01526018215F98B1006A5930 /* AppDelegate.swift in Sources */,
+				01E6165C2170DD8000ED8E10 /* ChecklistTableViewCell.swift in Sources */,
 				01A1837321645EA700486C6F /* ToDoList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
