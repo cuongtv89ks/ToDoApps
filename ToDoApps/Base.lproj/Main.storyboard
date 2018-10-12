@@ -63,11 +63,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Checklist" id="QTB-eC-HF6">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3Zh-aZ-Yws">
-                            <connections>
-                                <segue destination="FLw-dg-8qG" kind="show" identifier="AddItemSegue" id="MEr-2k-JVD"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="3Zh-aZ-Yws">
+                                <connections>
+                                    <segue destination="FLw-dg-8qG" kind="show" identifier="AddItemSegue" id="MEr-2k-JVD"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Delete" id="rQ0-L6-iuf">
+                                <connections>
+                                    <action selector="deleteItems:" destination="naD-HA-SCA" id="JXc-aH-B8V"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
