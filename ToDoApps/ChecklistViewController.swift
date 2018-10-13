@@ -11,6 +11,7 @@ import UIKit
 class ChecklistViewController: UITableViewController {
     
     var toDoList : ToDoList
+    var tableData : [[ChecklistItem?]?]!
     
     required init?(coder aDecoder: NSCoder) {
         toDoList = ToDoList()
@@ -23,6 +24,19 @@ class ChecklistViewController: UITableViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.leftBarButtonItem = editButtonItem
         tableView.allowsMultipleSelectionDuringEditing = true
+        
+        let sectionTableCount = UILocalizedIndexedCollation.current().sectionTitles.count
+        var allSections = [[ChecklistItem?]?](repeating: nil, count: sectionTableCount)
+        var sectionNumbers = 0
+        let collation = UILocalizedIndexedCollation.current()
+        for item in toDoList.toDos {
+            sectionNumbers = collation.section(for: item, collationStringSelector: #selector(getter: ChecklistItem.text))
+            if allSections[sectionNumbers] == nil {
+                allSections[sectionNumbers] = [ChecklistItem?]()
+            }
+            allSections[sectionNumbers]!.append(item)
+        }
+        tableData = allSections
     }
     
     override func setEditing(_ editing: Bool, animated: Bool) {
@@ -31,14 +45,16 @@ class ChecklistViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return toDoList.toDos.count
+        return tableData[section] == nil ? 0 : tableData[section]!.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChecklistItem", for: indexPath)
-        let item = toDoList.toDos[indexPath.row]
-        configureText(for: cell, with: item)
-        configureCheckMark(for: cell, with: item)
+        //let item = toDoList.toDos[indexPath.row]
+        if let item = tableData[indexPath.section]?[indexPath.row] {
+            configureText(for: cell, with: item)
+            configureCheckMark(for: cell, with: item)
+        }
         return cell
     }
     
@@ -125,6 +141,22 @@ class ChecklistViewController: UITableViewController {
                 }
             }
         }
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return tableData.count
+    }
+    
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return UILocalizedIndexedCollation.current().sectionTitles
+    }
+    
+    override func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+        return UILocalizedIndexedCollation.current().section(forSectionIndexTitle: index)
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return UILocalizedIndexedCollation.current().sectionTitles[section]
     }
 }
 
